@@ -29,10 +29,16 @@ module Webdrivers
       end
 
       def mac_location
-        locations = ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-                     '/Applications/Chromium.app/Contents/MacOS/Chromium']
+        directories = ['', File.expand_path('~')]
+        files = ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+                 '/Applications/Chromium.app/Contents/MacOS/Chromium']
 
-        locations.each { |loc| return loc if File.exist?(loc) }
+        directories.each do |dir|
+          files.each do |file|
+            option = "#{dir}/#{file}"
+            return option if File.exist?(option)
+          end
+        end
       end
 
       def linux_location
