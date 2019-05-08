@@ -54,15 +54,15 @@ module Webdrivers
       end
 
       def win_version(location)
-        System.call "powershell (Get-ItemProperty '#{location}').VersionInfo.ProductVersion"
+        System.call("powershell (Get-ItemProperty '#{location}').VersionInfo.ProductVersion")&.strip
       end
 
       def linux_version(location)
-        System.call("#{Shellwords.escape location} --product-version").strip
+        System.call("#{Shellwords.escape location} --product-version")&.strip
       end
 
       def mac_version(location)
-        System.call("#{Shellwords.escape location} --version").strip
+        System.call("#{Shellwords.escape location} --version")&.strip
       end
     end
   end
