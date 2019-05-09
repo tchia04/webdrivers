@@ -8,7 +8,8 @@ addons:
       - chromium-browser
       - libgconf-2-4
 #  chrome: stable
-  chrome: 69.0.3497.100
+#  chrome: 69.0.3497.100
+  chrome: unstable
 script: bundle exec rake $RAKE_TASK
 matrix:
   include:
