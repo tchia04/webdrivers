@@ -3,7 +3,8 @@ cache: bundler
 addons:
   apt:
     packages:
-      - chromium-browser
+      - google-chrome-beta
+#      - chromium-browser
       - libgconf-2-4
   chrome: stable
 script: bundle exec rake $RAKE_TASK
