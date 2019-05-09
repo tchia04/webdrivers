@@ -167,3 +167,6 @@ Bug reports and pull requests are welcome [on GitHub](https://github.com/titusfo
 
 Copyright (c) 2017-2019 Titus Fortner
 See LICENSE for details
+
+
+Test rebase
