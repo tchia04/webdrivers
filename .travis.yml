@@ -3,13 +3,9 @@ cache: bundler
 addons:
   apt:
     packages:
-#      - chromium-browser-69.0.3497.100
-#      - google-chrome-69.0.3497.100 fails on ubuntu but works on mac
       - chromium-browser
       - libgconf-2-4
-#  chrome: stable
-#  chrome: 69.0.3497.100
-  chrome: unstable
+  chrome: stable
 script: bundle exec rake $RAKE_TASK
 matrix:
   include:
