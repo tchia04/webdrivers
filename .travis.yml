@@ -3,9 +3,9 @@ cache: bundler
 addons:
   apt:
     packages:
-#      - chromium-browser-69.0.3497.100
+      - chromium-browser-69.0.3497.100
 #      - google-chrome-69.0.3497.100 fails on ubuntu but works on mac
-      - chromium-browser
+#      - chromium-browser
       - libgconf-2-4
   chrome: stable
 script: bundle exec rake $RAKE_TASK
@@ -13,14 +13,14 @@ matrix:
   include:
     - rvm: 2.6.3
       env: RAKE_TASK=spec
-#    - rvm: 2.5.5
-#      env: RAKE_TASK=spec
-#    - rvm: 2.4.6
-#      env: RAKE_TASK=spec
+    - rvm: 2.5.5
+      env: RAKE_TASK=spec
+    - rvm: 2.4.6
+      env: RAKE_TASK=spec
     - rvm: 2.4.6
       os: osx
       env: RAKE_TASK=spec
     - rvm: 2.4.6
       env: RAKE_TASK=rubocop
-#    - rvm: jruby-9.2.7.0
-#      env: RAKE_TASK=spec
+    - rvm: jruby-9.2.7.0
+      env: RAKE_TASK=spec
