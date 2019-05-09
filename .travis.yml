@@ -3,7 +3,7 @@ cache: bundler
 addons:
   apt:
     packages:
-      - google-chrome-beta
+      - google-chrome-69.0.3497.100
 #      - chromium-browser
       - libgconf-2-4
   chrome: stable
